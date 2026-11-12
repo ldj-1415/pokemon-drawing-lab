@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6f3ec" />
+    <meta
+      name="description"
+      content="Pokémon Drawing Lab 宝可梦绘画随机工作台：从全国图鉴抽取宝可梦，随机生成场景、天气、时间、动作与绘画挑战。"
+    />
+    <link rel="icon" type="image/svg+xml" href="/pokeball.svg" />
+    <title>Pokémon Drawing Lab · 宝可梦绘画随机工作台</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Vite app modules cannot run from file://. Show a useful explanation
+      // instead of a blank page when someone double-clicks index.html.
+      if (window.location.protocol === 'file:') {
+        document.addEventListener('DOMContentLoaded', function () {
+          var root = document.getElementById('root');
+          if (!root) return;
+          root.innerHTML = [
+            '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:#f5f2ea;color:#192235;font-family:Segoe UI,PingFang SC,Microsoft YaHei,sans-serif;box-sizing:border-box">',
+            '<div style="width:min(620px,100%);padding:34px;border:1px solid #e6dfd2;border-radius:24px;background:#fffdf8;box-shadow:0 18px 46px rgba(25,34,53,.09);box-sizing:border-box">',
+            '<div style="width:54px;height:54px;border-radius:16px;background:#e6534d;color:#fff;display:grid;place-items:center;font-size:26px;font-weight:800;margin-bottom:18px">P</div>',
+            '<p style="margin:0;color:#e6534d;font-size:10px;font-weight:800;letter-spacing:.16em">POKÉDRAW LAB</p>',
+            '<h1 style="margin:7px 0 10px;font-size:29px;line-height:1.2;letter-spacing:-.04em">请通过本地服务器启动</h1>',
+            '<p style="margin:0 0 20px;color:#747983;font-size:13px;line-height:1.75">你正在用文件方式直接打开 <code style="padding:2px 5px;border-radius:5px;background:#f1ebdf">index.html</code>。React + Vite 项目不能通过 <code style="padding:2px 5px;border-radius:5px;background:#f1ebdf">file://</code> 运行，请使用下面的任一方式。</p>',
+            '<div style="margin-bottom:14px;padding:15px 16px;border:1px solid #cbe5da;border-radius:12px;background:#f3faf7">',
+            '<strong style="display:block;font-size:13px;color:#316f5b;margin-bottom:3px">Windows 最简单方式</strong>',
+            '<span style="color:#52645e;font-size:12px">关闭本页，双击项目根目录中的 <b>启动.bat</b>。它会自动启动服务器并打开浏览器。</span>',
+            '</div>',
+            '<div style="padding:15px 16px;border:1px solid #e6dfd2;border-radius:12px;background:#faf6ee">',
+            '<strong style="display:block;font-size:13px;margin-bottom:7px">或者手动启动</strong>',
+            '<pre style="margin:0 0 9px;padding:10px 12px;border-radius:8px;background:#192235;color:#f7f5ef;font:12px/1.7 Consolas,monospace;white-space:pre-wrap">npm install\nnpm run dev</pre>',
+            '<span style="color:#747983;font-size:11.5px">然后打开终端显示的地址，通常是 <b>http://localhost:5173/</b>。</span>',
+            '</div>',
+            '<p style="margin:16px 0 0;color:#9b9da3;font-size:10.5px;line-height:1.6">不要直接双击 index.html；浏览器会因本地文件安全限制阻止 Vite 模块加载。</p>',
+            '</div>',
+            '</div>'
+          ].join('');
+        });
+      }
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+    <noscript>
+      <div style="padding:24px;font-family:sans-serif">请启用 JavaScript，并通过 <b>启动.bat</b> 或 <code>npm run dev</code> 启动本项目。</div>
+    </noscript>
+  </body>
+</html>
